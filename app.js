@@ -7,7 +7,8 @@ var _ = require('underscore')._;
 var env = process.env.NODE_ENV || 'development';
 
 var fs = require('fs')
-var http = require('http');
+var http = require('https');
+http.globalAgent.options.secureProtocol = 'SSLv3_method';
 
 var express = require('express');
 var bodyParser = require('body-parser');
